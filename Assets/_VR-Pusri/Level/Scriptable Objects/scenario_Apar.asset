@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae85f6c5519246498fa133e80bb431b, type: 3}
+  m_Name: scenario_Apar
+  m_EditorClassIdentifier: 
+  id: scn.FireExtinguisherTraining
+  scene: AparLab
+  module: {fileID: 11400000, guid: 3e0aca6481b8c2b48b71d396ed019c03, type: 2}
+  title: Fire Extinguisher Training
+  description: Operate fire extinguishers correctly and identifies the classes of
+    fire.
+  about: 'This fire extinguisher training educates the trainee how to operate fire
+    extinguishers correctly and identifies the classes of fire.
+
+    The scenario
+    also demonstrates what type of fire extinguisher must be used on each type of
+    fire.'
+  objective: "You will learn about what elements ignite fire through fire triangle
+    theory, classes of fire, and the types of fire extinguisher.\_\n\nThere are six
+    different classes of fire. Each class of fire needs different types of extinguishers.
+    You will learn how each type of extinguisher works and how to use them properly.\n\nYou
+    will familiarize yourself with the PASS technique (pull, aim, squeeze and sweep)
+    which is widely recognised in fire extinguisher training courses."
+  icon: {fileID: 0}
+  preview: {fileID: 21300000, guid: 5fcbf3c8f2085fb4b9eadceab5e3d39e, type: 3}
+  spots:
+  - Library
+  - Filling station
+  - Manufacturing room
+  - Workshop
+  - Office
+  - Kitchen
+  isUnlocked: 0
