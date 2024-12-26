@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1165718622763402585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2955458682764085048}
+  - component: {fileID: 2134406197004801479}
+  m_Layer: 0
+  m_Name: ConnectionFailModal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2955458682764085048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165718622763402585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2781930625934003566}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134406197004801479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165718622763402585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bffa2ef558abdf4dbc38daf2fafb108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title:
+    en: Something Went Wrong
+    id: Terjadi Kesalahan
+  message:
+    en: Please check your internet connection.
+    id: Tolong periksa koneksi internet anda.
+  yesText:
+    en: Okay
+    id: Baik
+  noText:
+    en: 
+    id: 
+  confirmCallback:
+    m_PersistentCalls:
+      m_Calls: []
+  cancelCallback:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &6358018714990688854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2781930625934003566}
+  - component: {fileID: 6945121009002402283}
+  - component: {fileID: 620813438484824047}
+  - component: {fileID: 3627124723941999942}
+  - component: {fileID: 5212304436504196344}
+  m_Layer: 0
+  m_Name: PKT Subsystems
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2781930625934003566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358018714990688854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2955458682764085048}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6945121009002402283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358018714990688854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1b68f9e74075d478f3f5ca995c9308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _runtimeMode: -1
+  enableConnectionFailConfirmation: 0
+  connectionFailConfirmation: {fileID: 2134406197004801479}
+  previewMaterial: {fileID: 2100000, guid: 05cdd62718e8880458c24e102446838b, type: 2}
+  rootCanvas: {fileID: 0}
+  statusBar: {fileID: 0}
+  moduleGroups:
+  - {fileID: 11400000, guid: 8f5f793f75e55c9449df31fe3ddee784, type: 2}
+  - {fileID: 11400000, guid: 69c6ace0882181544bb9492b2a62c6b0, type: 2}
+  - {fileID: 11400000, guid: 0f77acef9d79d1c49ae626f1ae30b384, type: 2}
+  - {fileID: 11400000, guid: 4af43fda49438ff49b775cd799c309f1, type: 2}
+  - {fileID: 11400000, guid: 5ed574980ae30f543a3b5390c770743a, type: 2}
+--- !u!114 &620813438484824047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358018714990688854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19ed6fec4fe58d4ca172274548c4c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _runtimeMode: -1
+  viewARSceneName: {fileID: 11400000, guid: fd1742e893bc41d42948064eb5c21c2e, type: 2}
+--- !u!114 &3627124723941999942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358018714990688854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c057e56490f304e8fabe55d94f1376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _runtimeMode: -1
+  publicKey: {fileID: 4900000, guid: f4b73b32de90e29459eed068d33c0146, type: 3}
+  symmetricKeyNri: {fileID: 11400000, guid: 233fe70eaf537994385c2ee843a9fa47, type: 2}
+--- !u!114 &5212304436504196344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358018714990688854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f669ac52be9bde4984dcb05c99914b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _runtimeMode: -1
+  getEquipmendNri: {fileID: 11400000, guid: aee1075c208022b4a907a28d227751ac, type: 2}
+  getCategoryListNri: {fileID: 11400000, guid: 86ce03317eaaa2a48a1fbbeeefbc7765, type: 2}
+  getDocumentListNri: {fileID: 11400000, guid: e3ca742e50969804faed88230e99c180, type: 2}
+  getDocumentPreviewUrlNri: {fileID: 11400000, guid: c894f613f8758404ca3176ecbcee9bec, type: 2}
+  getPartPreviewNri: {fileID: 11400000, guid: f1a4cf8b4bc4437468a3ce74be7a4f16, type: 2}
+  getPartPreviewUrlNri: {fileID: 11400000, guid: 1440001ae35f8c24cb2991e0156ed5c4, type: 2}
+  getOverhaulMediaNri: {fileID: 11400000, guid: 2a7e689852e46974e89f32d5392eee91, type: 2}
+  getOverhaulMediaUrlNri: {fileID: 11400000, guid: 041a3031c9eeceb47acee69047fec6c6, type: 2}
+  getDocumentNri: {fileID: 11400000, guid: a4ae7348e90d52f41b9f725b985fbcf0, type: 2}
+  getTexture2DNri: {fileID: 11400000, guid: e2f261d4f319e5a44bfb5de39eddd91f, type: 2}
+  getVideoNri: {fileID: 11400000, guid: b7f0aeebd21839246a0ac0c0d7a3b979, type: 2}
