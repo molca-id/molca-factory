@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Sentry;
 
 public class LoginHandler : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class LoginHandler : MonoBehaviour
 
     void Start()
     {
+        SentrySdk.CaptureMessage("Test event");
+
         if (!StaticData.need_login && 
             !string.IsNullOrEmpty(PlayerPrefs.GetString("UserData")))
         {
