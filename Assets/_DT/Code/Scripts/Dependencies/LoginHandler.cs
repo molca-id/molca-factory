@@ -8,7 +8,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Sentry;
 
 public class LoginHandler : MonoBehaviour
 {
@@ -18,13 +17,19 @@ public class LoginHandler : MonoBehaviour
     public TextMeshProUGUI errorLog;
     public TextMeshProUGUI descriptionLog;
     public Button signInButton, guestButton;
-    public GameObject loginPanel, forgotPassPanel;
+    public GameObject loginPanel;
+    public GameObject sukabumiBlockButton, kejayanBlockButton;
+
+    [Header("Event System")]
     public UnityEvent whenSignedIn;
     public UnityEvent whenOpenFactory;
 
+    [Header("Dummy Datum")]
+    [TextArea] public string dummyLoginRes;
+
     void Start()
     {
-        SentrySdk.CaptureMessage("Test event");
+        whenSignedIn.AddListener(() => SetupPlantLocation());
 
         if (!StaticData.need_login && 
             !string.IsNullOrEmpty(PlayerPrefs.GetString("UserData")))
@@ -112,27 +117,35 @@ public class LoginHandler : MonoBehaviour
 
     private void HandleLoginResponse(string res)
     {
+        if (!string.IsNullOrEmpty(dummyLoginRes))
+            res = dummyLoginRes;
+
         SetSignInState(true);
         var jsonNode = JSON.Parse(res);
         if (jsonNode["data"] != null)
         {
-            StaticData.current_user_data.username = jsonNode["data"]["attributes"]["username"];
-            StaticData.current_user_data.firstName = jsonNode["data"]["attributes"]["firstName"];
-            StaticData.current_user_data.lastName = jsonNode["data"]["attributes"]["lastName"];
-            StaticData.current_user_data.fullname = jsonNode["data"]["attributes"]["fullName"];
-            StaticData.current_user_data.email = jsonNode["data"]["attributes"]["email"];
+            StaticData.current_user_data.username = jsonNode["data"]["id"];
+            StaticData.current_user_data.fullname = jsonNode["data"]["attributes"]["name"];
+            StaticData.current_user_data.position = jsonNode["data"]["attributes"]["postition"];
+            StaticData.current_user_data.plant = jsonNode["data"]["attributes"]["plant"];
             StaticData.current_user_data.access_token = jsonNode["data"]["attributes"]["token"]["attributes"]["access"];
             StaticData.current_user_data.refresh_token = jsonNode["data"]["attributes"]["token"]["attributes"]["refresh"];
 
             string roles = string.Empty;
             StaticData.current_user_data.role_id = new List<string>();
-            foreach (JSONNode role in jsonNode["data"]["attributes"]["role"])
+            foreach (JSONNode role in jsonNode["data"]["attributes"]["roles"])
             {
-                string roleName = role["name"];
-                roleName = roleName.ToLower();
+                string roleName = role.Value.ToLower();
                 string roleCapitalized = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(roleName);
+
                 StaticData.current_user_data.role_id.Add(roleCapitalized);
                 roles += $"{roleCapitalized} ";
+
+                if (roleName == "admin")
+                {
+                    StaticData.current_user_data.role_id.Add("Manager");
+                    roles += $"Manager ";
+                }
             }
 
             APIManager.instance.currentUser = StaticData.current_user_data;
@@ -163,9 +176,21 @@ public class LoginHandler : MonoBehaviour
         StartCoroutine(APIManager.instance.PostDataCoroutine(
             "api/request-reset-password", jsonString, res =>
         {
-            forgotPassPanel.SetActive(true);
             SetSignInState(true);
         }));
+    }
+
+    void SetupPlantLocation()
+    {
+        if (!StaticData.current_user_data.role_id.
+                Exists(r => r == "Manager"))
+        {
+            Debug.Log(StaticData.current_user_data.plant.ToLower());
+            if (StaticData.current_user_data.plant.ToLower() == "sukabumi")
+                kejayanBlockButton.SetActive(true);
+            else if (StaticData.current_user_data.plant.ToLower() == "kejayan")
+                sukabumiBlockButton.SetActive(true);
+        }
     }
 
     public IEnumerator SetupNotifText(string message, bool state)

@@ -14,6 +14,8 @@ public class UserDatum
     public string access_token;
     public string refresh_token;
     public List<string> role_id;
+    public string position;
+    public string plant;
 }
 
 public static class StaticData
