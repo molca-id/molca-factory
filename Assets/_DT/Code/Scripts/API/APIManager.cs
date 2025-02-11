@@ -75,6 +75,7 @@ public class APIManager : MonoBehaviour
         UnityWebRequest request = new UnityWebRequest(url, "POST");
 
         request.SetRequestHeader("Content-Type", "application/json");
+        request.certificateHandler = new CustomCertificateHandler();
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
 
@@ -100,6 +101,7 @@ public class APIManager : MonoBehaviour
         string header = "Bearer " + StaticData.current_user_data.access_token;
 
         UnityWebRequest request = UnityWebRequest.Get(url);
+        request.certificateHandler = new CustomCertificateHandler();
         request.SetRequestHeader("Authorization", header);
 
         yield return request.SendWebRequest();
@@ -123,6 +125,7 @@ public class APIManager : MonoBehaviour
         string header = "Bearer " + StaticData.current_user_data.refresh_token;
 
         UnityWebRequest refreshRequest = UnityWebRequest.Get(refreshUrl);
+        refreshRequest.certificateHandler = new CustomCertificateHandler();
         refreshRequest.SetRequestHeader("Authorization", header);
 
         yield return refreshRequest.SendWebRequest();
@@ -160,6 +163,7 @@ public class APIManager : MonoBehaviour
     {
         string refreshUrl = SetupUri(imageUrl);
         using UnityWebRequest request = UnityWebRequestTexture.GetTexture(refreshUrl);
+        request.certificateHandler = new CustomCertificateHandler();
         yield return request.SendWebRequest();
 
         if (request.result != UnityWebRequest.Result.Success)

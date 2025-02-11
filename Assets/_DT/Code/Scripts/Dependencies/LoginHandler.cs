@@ -98,7 +98,7 @@ public class LoginHandler : MonoBehaviour
                "Please wait, logging in with current user data...",
                true
                ));
-
+    
         string jsonString = $"{{\"username\":\"{nameInputField.text}\"," +
             $"\"password\":\"{passInputField.text}\"}}";
         StartCoroutine(APIManager.instance.PostDataCoroutine(
