@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 470a51409b8e4fa4187fe3dd3f414d5f, type: 2}
   m_Color: {r: 0.10588236, g: 0.36078432, b: 0.72156864, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 1980751491936604192}
   - component: {fileID: 6952051723761780325}
   - component: {fileID: 9020524979505413624}
-  - component: {fileID: 5290317228587605531}
   m_Layer: 5
   m_Name: POI Button (1)
   m_TagString: Untagged
@@ -180,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 470a51409b8e4fa4187fe3dd3f414d5f, type: 2}
   m_Color: {r: 0, g: 1, b: 0.81960785, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -188,7 +187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 72fd30fccb80b08408ceda542e5fd763, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -198,20 +197,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 4.05
---- !u!114 &5290317228587605531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2298753615270434433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 16.5
-  image: {fileID: 9020524979505413624}
 --- !u!1 &3262497264066836219
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +208,6 @@ GameObject:
   - component: {fileID: 5558541240361389622}
   - component: {fileID: 6771179714311369145}
   - component: {fileID: 9192900564440246177}
-  - component: {fileID: 7752693753387334870}
   - component: {fileID: 4147722737318110564}
   - component: {fileID: 2188425246465918579}
   m_Layer: 5
@@ -274,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 470a51409b8e4fa4187fe3dd3f414d5f, type: 2}
   m_Color: {r: 0.15294118, g: 0.42352945, b: 0.80392164, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -282,8 +266,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: b3668359c611aa14c801f04370e14fb3, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -292,20 +276,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7752693753387334870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3262497264066836219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 15
-  image: {fileID: 9192900564440246177}
 --- !u!95 &4147722737318110564
 Animator:
   serializedVersion: 5
@@ -382,7 +352,6 @@ GameObject:
   - component: {fileID: 1914976542566258120}
   - component: {fileID: 3722279639165020522}
   - component: {fileID: 4603427520885201553}
-  - component: {fileID: 5252483282763413942}
   m_Layer: 5
   m_Name: POI Button (1)
   m_TagString: Untagged
@@ -429,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 470a51409b8e4fa4187fe3dd3f414d5f, type: 2}
   m_Color: {r: 0.72156864, g: 0.105882354, b: 0.23852186, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -437,7 +406,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 72fd30fccb80b08408ceda542e5fd763, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -447,20 +416,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 4.05
---- !u!114 &5252483282763413942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3778356044001194800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 16.5
-  image: {fileID: 4603427520885201553}
 --- !u!1 &5010728520673363957
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +695,6 @@ GameObject:
   - component: {fileID: 3733825945540589502}
   - component: {fileID: 6894147773132168595}
   - component: {fileID: 5497720649008407933}
-  - component: {fileID: 269083207235483920}
   m_Layer: 5
   m_Name: Disabled
   m_TagString: Untagged
@@ -788,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 470a51409b8e4fa4187fe3dd3f414d5f, type: 2}
   m_Color: {r: 0.72156864, g: 0.10588236, b: 0.23529413, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -796,7 +750,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 72fd30fccb80b08408ceda542e5fd763, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -806,20 +760,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 2.8
---- !u!114 &269083207235483920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6221459050144903827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 23
-  image: {fileID: 5497720649008407933}
 --- !u!1 &6631014889708738961
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +830,6 @@ GameObject:
   - component: {fileID: 6969840918090731002}
   - component: {fileID: 199533471049433514}
   - component: {fileID: 5795989641943765556}
-  - component: {fileID: 7336980931167610194}
   m_Layer: 5
   m_Name: Enabled
   m_TagString: Untagged
@@ -938,7 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 470a51409b8e4fa4187fe3dd3f414d5f, type: 2}
   m_Color: {r: 0, g: 1, b: 0.81960785, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -946,7 +885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 72fd30fccb80b08408ceda542e5fd763, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -956,17 +895,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 2.8
---- !u!114 &7336980931167610194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7822227066099398888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 23
-  image: {fileID: 5795989641943765556}
