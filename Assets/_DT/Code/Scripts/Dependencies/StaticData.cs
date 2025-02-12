@@ -21,7 +21,7 @@ public class UserDatum
 public static class StaticData
 {
     public static string branchDetail;
-    public static string molcaDomain = "https://api-aio.molca.id";
+    public static string molcaDomain = "http://api-aio.molca.id";
     public static string aioDomain = "https://aiotwins.aio.co.id/backend/api";
     
     public static int cooldown_timer = 5;
