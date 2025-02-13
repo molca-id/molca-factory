@@ -33,6 +33,11 @@ public class ROCEData
     [Header("Capital Investment Data")]
     public long fixedAssets;
     public long NOWC;
+
+    [Header("Result Data")]
+    public long profit;
+    public long revenues;
+    public float roce;
 }
 
 public class ROCEManager : MonoBehaviour
@@ -131,6 +136,11 @@ public class ROCEManager : MonoBehaviour
         revenueValueBeforeText.text = "IDR " + CalculateRevenues(roceData.roceData).ToString("N0", new CultureInfo("id-ID")); 
         roceValueBeforeText.text = CalculateROCE(roceData.roceData).ToString("F2") + "%";
 
+        // Assign profit, revenue and ROCE values from roceData calculations
+        roceData.roceData.profit = CalculateProfit(roceData.roceData);
+        roceData.roceData.revenues = CalculateRevenues(roceData.roceData);
+        roceData.roceData.roce = CalculateROCE(roceData.roceData);
+
         // Deep copy instead of shallow copy
         roceImprovementData = new ROCEData
         {
@@ -148,6 +158,8 @@ public class ROCEManager : MonoBehaviour
             fixedAssets = roceData.roceData.fixedAssets,
             NOWC = roceData.roceData.NOWC
         };
+        
+        Debug.Log(JsonUtility.ToJson(roceData.roceData));
     }
 
     private void SetupROCEImprovementData()
