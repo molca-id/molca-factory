@@ -17,6 +17,7 @@ public class TextButton
 public class MachineManager : MonoBehaviour
 {
     public float zoomFactor;
+    public string machineName;
     public Transform pivotTarget;
     public Transform cameraTarget;
     public GameObject machinePOI;

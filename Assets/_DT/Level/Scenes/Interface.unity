@@ -4029,7 +4029,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Sukabumi
+          m_StringArgument: Plant
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &873487307
@@ -7148,7 +7148,8 @@ MonoBehaviour:
   signInButton: {fileID: 1188117586}
   guestButton: {fileID: 468080663}
   loginPanel: {fileID: 198953445}
-  forgotPassPanel: {fileID: 0}
+  sukabumiBlockButton: {fileID: 0}
+  kejayanBlockButton: {fileID: 0}
   whenSignedIn:
     m_PersistentCalls:
       m_Calls:
@@ -7251,6 +7252,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  dummyLoginRes: 
 --- !u!114 &1530684946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7272,6 +7274,8 @@ MonoBehaviour:
     access_token: 
     refresh_token: 
     role_id: []
+    position: 
+    plant: 
 --- !u!114 &1530684947
 MonoBehaviour:
   m_ObjectHideFlags: 0
